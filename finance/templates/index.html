@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Stocks
+{% endblock %}
+
+{% block main %}
+
+    <div class="mb-3">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Stock Symbol</th>
+                    <th>Shares Owned</th>
+                    <th>Current Price per Stock (USD)</th>
+                    <th>Total Value of Holding (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(length) %}
+                    <tr>
+                        <td>{{ list_stock[i]['symbol'] }}</td>
+                        <td>{{ list_stock[i]['shares'] }}</td>
+                        <td>{{ stockval_new[i] }}</td>
+                        <td>{{ totalval_new[i] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="mb-3">
+            <div class="mb-3">
+                <h4>
+                    Your current Balance (USD) is: {{cash}}
+                </h4>
+            </div>
+            <div class="mb-3">
+                <h4>
+                    Your Grand Total (USD) is: {{grand_total}}
+                </h4>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

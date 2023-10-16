@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote for Stock Symbol
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        The name of the stock is: {{ name }}
+    </div>
+    <div class="mb-3">
+        The price for each stock in USD is: {{ price }}
+    </div>
+    <div class="mb-3">
+        The stock symbol is: {{ symbol }}
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+cs50
+Flask
+Flask-Session
+requests
+
+CREATE TABLE purchases (
+"purchaser_id" INTEGER NOT NULL,
+"symbol" TEXT,
+"shares" INTEGER,
+"price_per_share" REAL,
+"price_total" REAL,
+FOREIGN KEY(purchaser_id) REFERENCES users(id)
+);
+
+CREATE TABLE history (
+"history_person_id" INTEGER NOT NULL,
+"action" TEXT,
+"symbol" TEXT,
+"price" REAL,
+"shares" INTEGER,
+FOREIGN KEY(history_person_id) REFERENCES users(id)
+);
+
+This it the new table i created
