@@ -1,1 +1,2 @@
 # Stock-Tracker
+You can create an account and your credentials are saved in a database with password hashing and you start with 10000 pounds in your account. Have access to a stock API where you can check the price of stocks and buy them if you wish to do so. At the homepage it will tell you the stocks you own and how much they are worth as well as your total ballance if you were to sell the stock now. The history sections tells you all the transactions you have made across the accounts lifetime.
